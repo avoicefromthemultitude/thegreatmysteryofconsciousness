@@ -1971,6 +1971,514 @@
       </div>
 
       <!-- E = C(F,S) — March 2026 -->
+      <style>
+        #essay-ecfs .hero { display:none; }
+        #essay-ecfs .back-link { display:none; }
+        #essay-ecfs header.hero { display:none; }
+        
+#essay-ecfs font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-weight: 400;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────── */
+  .hero {
+
+#essay-ecfs background: var(--deep);
+    color: var(--white);
+    padding: 6rem 2rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+
+#essay-ecfs content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 28% 60%, rgba(124,92,191,.28) 0%, transparent 58%),
+      radial-gradient(ellipse at 74% 32%, rgba(15,110,86,.18) 0%, transparent 52%);
+    pointer-events: none;
+  }
+  .hero-label {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin-bottom: 1.8rem;
+  }
+  .hero-equation {
+
+#essay-ecfs font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: .04em;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  .hero-equation span { color: var(--soft); }
+#essay-ecfs .hero-subtitle {
+
+#essay-ecfs font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--soft);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    line-height: 1.65;
+  }
+  .hero-tagline {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .82rem;
+    font-weight: 300;
+    letter-spacing: .14em;
+    color: rgba(255,255,255,.38);
+    text-transform: uppercase;
+  }
+
+  /* ── LAYOUT ───────────────────────────────────────────────────── */
+  .container { max-width: 740px;  margin: 0 auto; padding: 0 2rem; }
+#essay-ecfs .container-wide { max-width: 920px;  margin: 0 auto; padding: 0 2rem; }
+#essay-ecfs section { padding: 4rem 0; }
+#essay-ecfs section + section { border-top: 1px solid var(--rule); }
+
+  /* ── TYPOGRAPHY ───────────────────────────────────────────────── */
+
+#essay-ecfs h2 {
+
+#essay-ecfs font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.55rem, 3.5vw, 2.15rem);
+    font-weight: 500;
+    color: var(--deep);
+    line-height: 1.25;
+    margin-bottom: 1.4rem;
+    letter-spacing: -.01em;
+  }
+  h3 {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .78rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .8rem;
+    margin-top: 2.4rem;
+  }
+  p { margin-bottom: 1.35rem; font-size: 1.04rem; }
+#essay-ecfs p:last-child { margin-bottom: 0; }
+#essay-ecfs em { font-style: italic; color: var(--mid); }
+#essay-ecfs strong { font-weight: 600;   color: var(--deep); }
+
+  /* ── GEM & CLOUD DIALOGUE ─────────────────────────────────────── */
+
+#essay-ecfs .dialogue {
+
+#essay-ecfs background: var(--deep);
+    padding: 3.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .dialogue::before {
+
+#essay-ecfs content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(26,82,118,.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 20%, rgba(74,35,90,.3)  0%, transparent 55%);
+    pointer-events: none;
+  }
+  .dialogue-inner {
+
+#essay-ecfs max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .dialogue-label {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--soft);
+    opacity: .6;
+    text-align: center;
+    margin-bottom: 2.2rem;
+  }
+  .speech {
+
+#essay-ecfs display: flex;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+    align-items: flex-start;
+  }
+  .speech.cloud { flex-direction: row-reverse; }
+#essay-ecfs .speaker-tag {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    padding: .3rem .7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    margin-top: .25rem;
+    flex-shrink: 0;
+  }
+  .gem-tag { background: var(--gem);   color: #d6eaf8; }
+#essay-ecfs .cloud-tag { background: var(--cloud); color: #f5eef8; }
+#essay-ecfs .bubble {
+
+#essay-ecfs padding: 1rem 1.3rem;
+    border-radius: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 540px;
+  }
+  .gem-bubble { background: rgba(26,82,118,.25);  color: #d6eaf8; border-radius: 4px 12px 12px 12px; }
+#essay-ecfs .cloud-bubble { background: rgba(74,35,90,.25);   color: #f5eef8; border-radius: 12px 4px 12px 12px; }
+#essay-ecfs .dialogue-divider {
+
+#essay-ecfs text-align: center;
+    padding: 1.2rem 0 0;
+    color: var(--soft);
+    opacity: .35;
+    font-size: 1.2rem;
+    letter-spacing: .5em;
+  }
+
+  /* ── PULL QUOTE ───────────────────────────────────────────────── */
+  .pull-quote {
+
+#essay-ecfs border-left: 3px solid var(--accent);
+    padding: 1.15rem 1.75rem;
+    margin: 2.4rem 0;
+    background: var(--pale);
+    border-radius: 0 8px 8px 0;
+  }
+  .pull-quote p {
+
+#essay-ecfs font-size: 1.22rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--mid);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── EQUATION DISPLAY ─────────────────────────────────────────── */
+  .eq-display {
+
+#essay-ecfs text-align: center;
+    padding: 3rem 2rem;
+    margin: 2.5rem 0;
+    background: var(--deep);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .eq-display::before {
+
+#essay-ecfs content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(124,92,191,.22) 0%, transparent 68%);
+  }
+  .eq-display .eq-main {
+
+#essay-ecfs font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 7vw, 4.4rem);
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: .06em;
+    position: relative;
+  }
+  .eq-display .eq-main span { color: var(--soft); }
+#essay-ecfs .eq-display .eq-read {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .84rem;
+    font-weight: 300;
+    color: var(--soft);
+    letter-spacing: .1em;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  /* ── TERM CARDS ───────────────────────────────────────────────── */
+  .terms-grid {
+
+#essay-ecfs display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.15rem;
+    margin: 2rem 0;
+  }
+  .term-card {
+
+#essay-ecfs border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .term-card::before {
+
+#essay-ecfs content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+  }
+  .term-card.f::before { background: var(--mid); }
+#essay-ecfs .term-card.s::before { background: var(--teal); }
+#essay-ecfs .term-card.c::before { background: var(--amber); }
+#essay-ecfs .term-card.e::before { background: var(--accent); }
+#essay-ecfs .term-card .symbol {
+
+#essay-ecfs font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: .4rem;
+  }
+  .term-card.f .symbol { color: var(--mid); }
+#essay-ecfs .term-card.s .symbol { color: var(--teal); }
+#essay-ecfs .term-card.c .symbol { color: var(--amber); }
+#essay-ecfs .term-card.e .symbol { color: var(--accent); }
+#essay-ecfs .term-card .term-name {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .74rem;
+    font-weight: 500;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .6rem;
+  }
+  .term-card .term-def { font-size: .95rem; color: var(--ink); line-height: 1.65; margin: 0; }
+#essay-ecfs .term-card .term-also { font-size: .82rem; color: var(--muted); font-style: italic; margin-top: .5rem; }
+
+  /* ── ANALOGY BLOCKS ───────────────────────────────────────────── */
+
+#essay-ecfs .analogy {
+
+#essay-ecfs border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+  .analogy-head {
+
+#essay-ecfs background: var(--pale);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+  }
+  .analogy-head .glyph { font-size: 1.4rem; width: 2.2rem; text-align: center; }
+#essay-ecfs .analogy-head h4 {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .83rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .analogy-body { padding: 1.2rem 1.5rem; background: var(--white); }
+#essay-ecfs .analogy-row {
+
+#essay-ecfs display: flex;
+    gap: 1rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: .95rem;
+    align-items: baseline;
+  }
+  .analogy-row:last-child { border-bottom: none; }
+#essay-ecfs .analogy-sym { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; min-width: 1.8rem; color: var(--accent); }
+#essay-ecfs .analogy-eq { color: var(--muted); min-width: 7rem; font-style: italic; }
+#essay-ecfs .analogy-meaning { color: var(--ink); flex: 1; }
+
+  /* ── DIAGRAM ──────────────────────────────────────────────────── */
+
+#essay-ecfs .diagram-wrap { margin: 2.5rem 0; text-align: center; }
+#essay-ecfs .diagram-wrap img { max-width: 100%; border-radius: 12px; border: 1px solid var(--rule); }
+#essay-ecfs .diagram-caption { font-family: 'Jost', sans-serif; font-size: .78rem; color: var(--muted); letter-spacing: .08em; margin-top: .8rem; font-style: italic; }
+
+  /* ── CLAIMS ───────────────────────────────────────────────────── */
+
+#essay-ecfs .claims { margin: 2rem 0; }
+#essay-ecfs .claim {
+
+#essay-ecfs display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1.2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .claim:last-child { border-bottom: none; }
+#essay-ecfs .claim-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--soft); line-height: 1; padding-top: .15rem; min-width: 2.2rem; }
+#essay-ecfs .claim-text strong { display: block; font-family: 'Jost', sans-serif; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mid); margin-bottom: .4rem; font-weight: 500; }
+#essay-ecfs .claim-text p { font-size: .95rem; margin: 0; }
+
+  /* ── DOMAIN TABLE ─────────────────────────────────────────────── */
+
+#essay-ecfs .domain-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .87rem; }
+#essay-ecfs .domain-table th { font-family: 'Jost', sans-serif; font-size: .7rem; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--white); background: var(--deep); padding: .7rem .9rem; text-align: left; }
+#essay-ecfs .domain-table td { padding: .65rem .9rem; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.5; }
+#essay-ecfs .domain-table tr:nth-child(even) td { background: var(--pale); }
+#essay-ecfs .domain-table td:first-child { font-weight: 500; color: var(--mid); }
+#essay-ecfs .domain-table td.f-col { color: var(--mid);    font-style: italic; }
+#essay-ecfs .domain-table td.s-col { color: var(--teal);   font-style: italic; }
+#essay-ecfs .domain-table td.c-col { color: var(--amber);  font-style: italic; }
+#essay-ecfs .domain-table td.e-col { color: var(--accent); font-style: italic; }
+
+  /* ── CALLOUT ──────────────────────────────────────────────────── */
+
+#essay-ecfs .callout { background: var(--pale); border: 1px solid var(--rule); border-radius: 10px; padding: 1.55rem 1.75rem; margin: 2rem 0; }
+#essay-ecfs .callout.teal { background: var(--teal-lt);  border-color: rgba(15,110,86,.22); }
+#essay-ecfs .callout.amber { background: var(--amber-lt); border-color: rgba(133,79,11,.22); }
+#essay-ecfs .callout p { font-size: .95rem; margin-bottom: .8rem; }
+#essay-ecfs .callout p:last-child { margin-bottom: 0; }
+#essay-ecfs .callout-label { font-family: 'Jost', sans-serif; font-size: .7rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: .8rem; }
+#essay-ecfs .callout.teal  .callout-label { color: var(--teal); }
+#essay-ecfs .callout.amber .callout-label { color: var(--amber); }
+
+  /* ── CLOSING HERO ─────────────────────────────────────────────── */
+
+#essay-ecfs .closing { background: var(--deep); color: var(--white); padding: 5rem 2rem; text-align: center; }
+#essay-ecfs .closing h2 { color: var(--white); font-size: clamp(1.5rem, 3.5vw, 2.2rem); margin-bottom: 1.5rem; }
+#essay-ecfs .closing p { color: rgba(255,255,255,.7); max-width: 600px; margin: 0 auto 1.2rem; font-size: 1.05rem; }
+#essay-ecfs .closing .eq-final { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 300; color: var(--white); letter-spacing: .06em; margin: 2.5rem 0; }
+#essay-ecfs .closing .eq-final span { color: var(--soft); }
+#essay-ecfs .closing .final-question { font-size: 1.15rem; font-style: italic; color: var(--soft); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+  /* ── COMMENTS SECTION ─────────────────────────────────────────── */
+
+#essay-ecfs .comments-section {
+
+#essay-ecfs padding: 4rem 2rem;
+    border-top: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .comments-inner { max-width: 740px; margin: 0 auto; }
+#essay-ecfs .comments-header {
+
+#essay-ecfs text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .comments-header .c-label {
+
+#essay-ecfs font-family: 'Jost', sans-serif;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: .6rem;
+  }
+  .comments-header h2 {
+
+#essay-ecfs font-size: 1.5rem;
+    color: var(--deep);
+    margin-bottom: .5rem;
+  }
+  .comments-header p {
+
+#essay-ecfs font-size: .92rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0;
+  }
+  .giscus-note {
+
+#essay-ecfs background: var(--pale);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    font-size: .85rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    font-family: 'Jost', sans-serif;
+    line-height: 1.6;
+  }
+  .giscus-note strong { color: var(--mid); }
+
+  /* ── SETUP INSTRUCTIONS (visible only before Giscus configured) ─ */
+
+#essay-ecfs .setup-box {
+
+#essay-ecfs border: 2px dashed var(--rule);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background: var(--pale);
+  }
+  .setup-box h3 {
+
+#essay-ecfs color: var(--mid);
+    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: 0;
+    margin-top: 0;
+  }
+  .setup-box ol {
+
+#essay-ecfs text-align: left;
+    font-size: .9rem;
+    color: var(--ink);
+    line-height: 1.8;
+    max-width: 480px;
+    margin: 1rem auto;
+    padding-left: 1.4rem;
+  }
+  .setup-box code {
+
+#essay-ecfs background: var(--deep);
+    color: var(--soft);
+    padding: .15rem .4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: .82rem;
+  }
+  .setup-box a { color: var(--accent); }
+
+  /* ── FOOTER NAV ───────────────────────────────────────────────── */
+
+#essay-ecfs .essay-nav { padding: 2rem; text-align: center; border-top: 1px solid var(--rule); }
+#essay-ecfs .essay-nav a { font-family: 'Jost', sans-serif; font-size: .8rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+#essay-ecfs .essay-nav a:hover { text-decoration: underline; }
+
+  /* ── RESPONSIVE ───────────────────────────────────────────────── */
+  @media (max-width: 600px) {
+
+#essay-ecfs .terms-grid { grid-template-columns: 1fr; }
+#essay-ecfs .domain-table { font-size: .76rem; }
+#essay-ecfs .domain-table td, .domain-table th { padding: .5rem .55rem; }
+#essay-ecfs .analogy-eq { min-width: 4.5rem; }
+#essay-ecfs .speech { flex-direction: column !important; }
+#essay-ecfs .cloud { align-items: flex-end; }
+#essay-ecfs .bubble { max-width: 100%; }
+  }
+
+      </style>
       <div id="essay-ecfs" style="position:relative;overflow:hidden;margin-top:3rem;border:1px solid rgba(124,92,191,0.25);box-shadow:0 4px 32px rgba(30,10,80,0.10);">
         <div style="background:linear-gradient(135deg,#1a1035 0%,#3d2d7a 50%,#1a1035 100%);padding:3.5rem 4rem 2.5rem;text-align:center;position:relative;">
           <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(124,92,191,0.15) 0%,transparent 70%);pointer-events:none;"></div>
@@ -1978,7 +2486,7 @@
           <h3 style="font-size:1.9rem;font-weight:400;font-style:italic;color:rgba(255,255,255,0.95);margin-bottom:0.8rem;position:relative;z-index:1;">E = C(F, S)</h3>
           <p style="font-family:'Lora',serif;font-size:1.05rem;font-style:italic;color:rgba(184,164,224,0.8);position:relative;z-index:1;">A New Equation for Consciousness</p>
         </div>
-        <div style="padding:3rem 4rem 4rem;background:#faf9fd;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;line-height:1.9;color:#2c2440;">
+        <div style="padding:3rem 4rem 4rem;background:#faf9fd;overflow:hidden;max-width:100%;">
           
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -2501,7 +3009,7 @@
         </div>
       </div>
 
-            <div id="story-cathedral" style="position:relative;overflow:hidden;margin-top:3rem;border:1px solid rgba(180,120,30,0.3);box-shadow:0 4px 32px rgba(60,30,0,0.15);">
+      <div id="story-cathedral" style="position:relative;overflow:hidden;margin-top:3rem;border:1px solid rgba(180,120,30,0.3);box-shadow:0 4px 32px rgba(60,30,0,0.15);">
 
         <div style="background:linear-gradient(135deg,#1a1000 0%,#3a2000 50%,#1a1000 100%);padding:3.5rem 4rem 2.5rem;text-align:center;position:relative;overflow:hidden;">
           <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(220,140,30,0.15) 0%,transparent 70%);pointer-events:none;"></div>
